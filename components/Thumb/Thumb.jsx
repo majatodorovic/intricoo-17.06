@@ -101,8 +101,8 @@ export const Thumb = forwardRef(
       >
         <div className={`item relative aspect-2/3 w-full`}>
           <Swiper
-            modules={[Navigation]}
-            pagination={true}
+            modules={[]}
+           
             rewind
             noSwiping={true}
             noSwipingClass="swiper-slide"
@@ -111,24 +111,13 @@ export const Thumb = forwardRef(
             )}
             breakpoints={{
               320: {
-                navigation: {
-                  enabled: false,
-                },
                 allowTouchMove: false,
               },
               600: {
-                navigation: {
-                  enabled: false,
-                },
                 allowTouchMove: false,
               },
               1024: {
-                navigation: {
-                  enabled: true,
-                },
-                pagination: {
-                  enabled: false,
-                },
+                // bez navigation i pagination
               },
             }}
             className={`categoryImageSwiper relative h-full w-full`}
@@ -155,6 +144,9 @@ export const Thumb = forwardRef(
                     href={link}
                     className="relative cursor-pointer"
                     style={{ display: "block" }}
+                    onClick={() => {
+                      pushToDataLayer("view_item", product);
+                    }}
                   >
                     <img
                       ref={ref}
