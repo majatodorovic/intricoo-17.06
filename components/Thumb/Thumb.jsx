@@ -156,16 +156,13 @@ export const Thumb = forwardRef(
                     className="relative cursor-pointer"
                     style={{ display: "block" }}
                   >
-                    <Image
+                    <img
                       ref={ref}
                       src={url ? convertHttpToHttps(url) : noImage}
                       alt={product?.basic_data?.name}
                       sizes={
                         "(max-width: 639px) 100vw, (max-width: 767px) 100vw, (max-width: 1023px) 100vw, (max-width: 1279px) 100vw, (min-width: 1600px) 50vw"
                       }
-                      width={0}
-                      height={0}
-                      fill
                       className={`h-full w-full object-cover transition-all duration-500 ease-in-out hover:scale-110`}
                     />
                   </Link>
