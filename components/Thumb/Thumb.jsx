@@ -156,7 +156,7 @@ export const Thumb = forwardRef(
                     className="relative cursor-pointer"
                     style={{ display: "block" }}
                   >
-                    <img
+                    <Image
                       ref={ref}
                       src={url ? convertHttpToHttps(url) : noImage}
                       alt={product?.basic_data?.name}
