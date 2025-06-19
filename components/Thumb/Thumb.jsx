@@ -2,9 +2,7 @@
 import { useState, forwardRef, useEffect } from "react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import { Navigation, Pagination } from "swiper/modules";
+
 import { convertHttpToHttps } from "@/helpers/convertHttpToHttps";
 import ProductPrice from "@/components/ProductPrice/ProductPrice";
 import { getColorByColorName } from "@/helpers/getColorByColorName";
@@ -102,7 +100,6 @@ export const Thumb = forwardRef(
         <div className={`item relative aspect-2/3 w-full`}>
           <Swiper
             modules={[]}
-           
             rewind
             noSwiping={true}
             noSwipingClass="swiper-slide"
